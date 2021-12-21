@@ -1,3 +1,16 @@
+# Heroku link
+https://appfacturas00.herokuapp.com/
+
+# gets con filtros
+1)
+https://appfacturas00.herokuapp.com/facturas?filter=%7B%0A%20%20%22include%22%3A%20%5B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%22relation%22%3A%20%22detalleFacturas%22%2C%0A%20%20%20%20%20%20%22scope%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22offset%22%3A%200%2C%0A%20%20%20%20%20%20%20%20%22limit%22%3A%202%2C%0A%20%20%20%20%20%20%20%20%22skip%22%3A%200%2C%0A%20%20%20%20%20%20%20%20%22order%22%3A%20%22precio%20ASC%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%5D%0A%7D%0A
+
+2)
+https://appfacturas00.herokuapp.com/productos?filter=%7B%0A%20%20%22offset%22%3A%200%2C%0A%20%20%22limit%22%3A%20100%2C%0A%20%20%22skip%22%3A%200%2C%0A%20%20%22order%22%3A%20%22nombre%20ASC%22%2C%0A%20%20%22include%22%3A%20%5B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%22relation%22%3A%20%22detalleFacturas%22%2C%0A%20%20%20%20%20%20%22scope%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22offset%22%3A%200%2C%0A%20%20%20%20%20%20%20%20%22limit%22%3A%202%2C%0A%20%20%20%20%20%20%20%20%22skip%22%3A%200%2C%0A%20%20%20%20%20%20%20%20%22order%22%3A%20%22precio%20DESC%22%2C%0A%20%20%20%22where%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%22cantidad%22%3A%20%7B%22between%22%3A%5B5%2C80%5D%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%5D%0A%7D%0A
+
+3)
+https://appfacturas00.herokuapp.com/detalle-facturas?filter=%7B%0A%20%20%22include%22%3A%20%5B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%22relation%22%3A%20%22producto%22%2C%0A%20%20%20%20%20%20%22scope%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22offset%22%3A%200%2C%0A%20%20%20%20%20%20%20%20%22limit%22%3A%205%2C%0A%20%20%20%20%20%20%20%20%22skip%22%3A%200%2C%0A%20%20%20%20%20%20%20%20%22order%22%3A%20%22cantidad%20ASC%22%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%7D%2C%0A%7B%0A%20%20%20%20%20%20%22relation%22%3A%20%22factura%22%2C%0A%20%20%20%20%20%20%20%22fields%22%3A%20%7B%22cliente%22%3Atrue%2C%22rtn%22%3Afalse%7D%0A%20%20%20%20%7D%0A%20%20%5D%0A%7D
+
 # facturas
 
 This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
